@@ -1,54 +1,105 @@
-# React + TypeScript + Vite
+# React Frontend Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade React application template with modern tooling and best practices. Clone and use this template to jumpstart your projects without the hassle of setting up the boilerplate every time.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ **Vite** - Lightning fast build tool with instant HMR
+- 🔄 **React 18** - Latest React with improved rendering and concurrent features
+- 🧰 **TypeScript** - Type safety for robust application development
+- 🔄 **Redux Toolkit** - State management with simplified Redux setup
+- 🛣️ **React Router** - Declarative routing for React applications
+- 💅 **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+- 📏 **ESLint & Prettier** - Code quality and formatting consistency
+- 🧪 **Ready for testing** - Set up for component and integration tests
+- 📁 **Scalable architecture** - Feature-based file structure for large applications
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+src/
+├── assets/ # Static assets like images, fonts
+├── components/ # Reusable UI components
+├── features/ # Feature-based modules with related logic
+│ └── counter/ # Example feature with components and state
+├── hooks/ # Custom React hooks
+├── layouts/ # Layout components
+├── pages/ # Page components for routing
+├── routes/ # Routing configuration
+├── store/ # Redux store setup and root reducer
+├── styles/ # Global styles and CSS utilities
+└── types/ # TypeScript type definitions
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Node.js (v18)
+- npm or yarn
+
+### Installation
+
+1. Fork & Clone the repository:
+
+```bash
+git https://github.com/why-it-works/frontend-template.git
+cd frontend-template
 ```
+
+2. Install dependencies:
+
+```bash
+nvm install v18.20.4
+nvm use v18.20.4
+npm install
+# or
+yarn
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint for code quality checking
+- `npm run preview` - Preview the production build locally
+
+## Technology Stack
+
+- **React** - UI library
+- **TypeScript** - Type checking
+- **Redux Toolkit** - State management
+- **React Router** - Routing
+- **Tailwind CSS** - Styling
+- **Vite** - Build tool
+- **ESLint/Prettier** - Code quality and formatting
+- **Axios** - HTTP client
+
+## Why This Template?
+
+This template follows industry best practices and provides:
+
+- **Scalable Architecture**: Feature-based organization that scales with your application
+- **Type Safety**: Full TypeScript integration for better developer experience
+- **Performance Optimized**: Built with Vite for fast development and optimized production builds
+- **State Management**: Redux Toolkit configured with best practices
+- **Consistent Styling**: Tailwind CSS with custom utility classes
+- **Path Aliases**: Configured with `@/` aliases for cleaner imports
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
